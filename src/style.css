@@ -1,0 +1,154 @@
+@fontface {
+  font-family: "JetBrains Mono";
+  src: local("JetBrains Mono")
+    url("https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/variable/JetBrainsMono%5Bwght%5D.woff2");
+  font-weight: 700;
+}
+@media (max-width: 319px) {
+  body * {
+    display: none !important;
+  }
+  body::before {
+    content: "Your screen is too small.\a\aRotate your phone or resize the window to continue.";
+    display: block;
+    text-align: center;
+    white-space: pre-wrap;
+    padding: 10px;
+  }
+}
+#board {
+  width: 304px;
+  height: 304px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 2px;
+  background-color: black;
+  margin: 50px auto;
+}
+body {
+  margin: 0;
+  font-weight: 700;
+  padding: 60px 0 30px 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", "Lucida Console", "Andale Mono", monospace;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+}
+.blue {
+  color: #1377db;
+}
+.red {
+  color: #dd3047;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 150ms;
+  border: none;
+  font-family: inherit;
+}
+#board[data-turn="false"] > .square:not(:has(span)):hover,
+#board[data-turn="false"] > .square:not(:has(span)):focus {
+  background-color: #ddeaf7;
+  outline: none;
+}
+#board[data-turn="true"] > .square:not(:has(span)):hover,
+#board[data-turn="true"] > .square:not(:has(span)):focus {
+  background-color: #fceaed;
+  outline: none;
+}
+.square:has(span) {
+  cursor: default;
+}
+#top-left {
+  padding: 20px 5px 5px 20px;
+}
+#top-right {
+  padding: 20px 20px 5px 5px;
+}
+#bottom-left {
+  padding: 5px 5px 20px 20px;
+}
+#bottom-right {
+  padding: 5px 20px 20px 5px;
+}
+#left {
+  padding: 12.5px 5px 12.5px 20px;
+}
+#top {
+  padding: 20px 12.5px 5px 12.5px;
+}
+#right {
+  padding: 12.5px 20px 12.5px 5px;
+}
+#bottom {
+  padding: 5px 12.5px 20px 12.5px;
+}
+#center {
+  padding: 12.5px;
+}
+#restart {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  color: #1377db;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transition: all 150ms;
+  outline: none;
+}
+#restart::before {
+  content: "";
+  display: block;
+  width: calc(100% - 20px);
+  height: 1.5px;
+  background-color: #1377db;
+  position: absolute;
+  bottom: 1px;
+  transition: all 150ms;
+  z-index: -1;
+  left: 10px;
+}
+#restart:hover::before,
+#restart:focus::before {
+  height: calc(1em + 4px);
+  left: 0px;
+  width: 100%;
+}
+#restart:hover,
+#restart:focus {
+  color: white;
+  font-weight: 700;
+}
+p {
+  text-align: center;
+}
+.x {
+  color: #1377db;
+}
+.o {
+  color: #dd3047;
+}
+.square span {
+  display: block;
+  font-size: 50px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+}
+#text {
+  display: inline-block;
+  width: 120px;
+}

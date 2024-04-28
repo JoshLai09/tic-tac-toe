@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1><span class="blue">tic</span>_<span class="red">tac</span>_<span class="blue">toe</span></h1>
+  <div id="board" data-turn="false">
+    <button class="square" id="top-left"></button>
+    <button class="square" id="top"></button>
+    <button class="square" id="top-right"></button>
+    <button class="square" id="left"></button>
+    <button class="square" id="center"></button>
+    <button class="square" id="right"></button>
+    <button class="square" id="bottom-left"></button>
+    <button class="square" id="bottom"></button>
+    <button class="square" id="bottom-right"></button>
+  </div>
+  <p id="results">
+    <span id="text">In progress</span>
+    <button id="restart" onclick="restart()">RESTART</button>
+  </p>
+  <script  src="script.js"></script>
+</body>
+</html>
