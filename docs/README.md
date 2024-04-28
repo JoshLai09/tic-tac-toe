@@ -9,3 +9,4 @@ Get three of your pieces in a row, column, or diagonal before the other player d
 
 ## Demos
 Codepen: [https://codepen.io/joshualai/pen/gOyybvr](https://codepen.io/joshualai/pen/gOyybvr)
+Github pages: [https://joshlai09.github.io/tic-tac-toe/src/index.html](https://joshlai09.github.io/tic-tac-toe/src/index.html)
