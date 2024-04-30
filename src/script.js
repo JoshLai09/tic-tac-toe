@@ -59,6 +59,7 @@ function restart() {
   moveCount = 0;
   turn = false;
   document.getElementById("board").dataset.turn = turn.toString();
+  document.getElementById("restart").blur();
 }
 
 
